@@ -54,13 +54,13 @@ pipeline {
 
     post {
         success {
-            emailext body: 'Build Successful: Check console output at $BUILD_URL', 
-                     subject: 'Build Success - Project Name', 
+            emailext body: 'Build Successful', 
+                     subject: 'Build Success - Task 6.1C', 
                      to: 's223852007@deakin.edu.au' 
         }
         failure {
-            emailext body: 'Build Failed: Check console output at $BUILD_URL', 
-                     subject: 'Build Failed - Project Name', 
+            emailext body: 'Build Failed', 
+                     subject: 'Build Failed - Task 6.1C', 
                      to: 's223852007@deakin.edu.au' 
         } 
     }
