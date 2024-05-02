@@ -56,12 +56,12 @@ pipeline {
         success {
             emailext body: 'Build Successful', 
                      subject: 'Build Success - Task 6.1C', 
-                     to: 's223852007@deakin.edu.au' 
+                     to: 'aditya.malik32x@gmail.com' 
         }
         failure {
             emailext body: 'Build Failed', 
                      subject: 'Build Failed - Task 6.1C', 
-                     to: 's223852007@deakin.edu.au' 
+                     to: 'aditya.malik32x@gmail.com' 
         } 
     }
 }
