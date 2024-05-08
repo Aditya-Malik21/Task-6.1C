@@ -55,7 +55,7 @@ pipeline {
     post {
         success {
             mail    to: 'aditya.malik32x@gmail.com',
-                    body: 'Build Successful', 
+                    body: 'Build Successful log: ${BUILD_LOG}', 
                     subject: 'Build Success - Task 6.1C'
                 
                       
