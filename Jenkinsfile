@@ -54,16 +54,14 @@ pipeline {
 
     post {
         success {
-            def buildLog = currentBuild.rawBuild.getLog(1000) // Capture build log (last 1000 lines)
             mail to: 'aditya.malik32x@gmail.com',
                  subject: 'Build Success - Task 6.1C',
-                 body: "Build Successful\n\nBuild Log:\n${buildLog}"
+                 body: "Build Successful\n\nBuild Log:\n" + currentBuild.rawBuild.getLog(1000)
         }
         failure {
-            def buildLog = currentBuild.rawBuild.getLog(1000) // Capture build log (last 1000 lines)
             mail to: 'aditya.malik32x@gmail.com',
                  subject: 'Build Failed - Task 6.1C',
-                 body: "Build Failed\n\nBuild Log:\n${buildLog}"
+                 body: "Build Failed\n\nBuild Log:\n" + currentBuild.rawBuild.getLog(1000)
         } 
     }
 }
