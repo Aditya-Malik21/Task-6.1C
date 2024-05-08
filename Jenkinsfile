@@ -54,14 +54,14 @@ pipeline {
 
     post {
         success {
-            emailext    attachLog: true,
+            mail   
                     to: 'aditya.malik32x@gmail.com',
                     body: 'Build Successful', 
                     subject: 'Build Success - Task 6.1C'
                       
         }
         failure {
-            emailext    attachLog: true,
+            mail   
                     to: 'aditya.malik32x@gmail.com',
                     body: 'Build Failed', 
                     subject: 'Build Failed - Task 6.1C'
