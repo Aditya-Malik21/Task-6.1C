@@ -54,14 +54,16 @@ pipeline {
 
     post {
         success {
-            mail to: 'aditya.malik32x@gmail.com',
-                 subject: 'Build Success - Task 6.1C',
-                 body: "Build Successful\n\nBuild Log:\n" + currentBuild.rawBuild.getLog(1000)
+            mail    to: 'aditya.malik32x@gmail.com',
+                    body: 'Build Successful', 
+                    subject: 'Build Success - Task 6.1C'
+                      
         }
         failure {
-            mail to: 'aditya.malik32x@gmail.com',
-                 subject: 'Build Failed - Task 6.1C',
-                 body: "Build Failed\n\nBuild Log:\n" + currentBuild.rawBuild.getLog(1000)
+            mail    to: 'aditya.malik32x@gmail.com',
+                    body: 'Build Failed', 
+                    subject: 'Build Failed - Task 6.1C'
+                      
         } 
     }
 }
